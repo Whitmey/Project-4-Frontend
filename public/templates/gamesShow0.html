@@ -1,7 +1,0 @@
-<h1>Profiles Show</h1>
-<!-- {{show.user}} -->
-<h1>{{ show.profile.rank }}</h1>
-<div ng-controller="MainController as main">
-<button ng-if="main.isLoggedIn()" ui-sref="profilesEdit({ id: show.profile.id })" class="button">Edit</button>
-<button ng-if="main.isLoggedIn()" ng-click="show.delete()">Delete</button>
-</div>

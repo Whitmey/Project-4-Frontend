@@ -73,6 +73,15 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/reviews/:id/edit',
     templateUrl: '/templates/reviewsEdit.html',
     controller: 'ReviewsEditController as reviewsEdit'
+  })
+  .state('home', {
+    url: '/home',
+    templateUrl: '/templates/home.html'
+  })
+  .state('createProfile', {
+    url: '/createProfile',
+    templateUrl: '/templates/createProfile.html',
+    controller: 'ProfilesNewController as profilesNew'
   });
 
   $urlRouterProvider.otherwise('/users');

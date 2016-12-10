@@ -1,0 +1,11 @@
+<section>
+  <h1>Reviews Index</h1>
+  <ul>
+    <li ng-repeat="review in reviewsIndex.all">
+      <a ui-sref="reviewsShow({ id: review.id })">
+        <h2>{{ review.rating }}</h2>
+      </a>
+        <h4>{{ review.body }}</h4>
+    </li>
+  </ul>
+</section>

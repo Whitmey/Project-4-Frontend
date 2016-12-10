@@ -58,6 +58,21 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/games/:id/edit',
     templateUrl: '/templates/gamesEdit.html',
     controller: 'GamesEditController as gamesEdit'
+  })
+  .state('reviewsIndex', {
+    url: '/reviews',
+    templateUrl: '/templates/reviewsIndex.html',
+    controller: 'ReviewsIndexController as reviewsIndex'
+  })
+  .state('reviewsShow', {
+    url: '/reviews/:id',
+    templateUrl: '/templates/reviewsShow.html',
+    controller: 'ReviewsShowController as review'
+  })
+  .state('reviewsEdit', {
+    url: '/reviews/:id/edit',
+    templateUrl: '/templates/reviewsEdit.html',
+    controller: 'ReviewsEditController as reviewsEdit'
   });
 
   $urlRouterProvider.otherwise('/users');

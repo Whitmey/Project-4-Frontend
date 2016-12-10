@@ -1,0 +1,11 @@
+<section>
+  <h1>Profiles Index</h1>
+  <ul>
+    <li ng-repeat="profile in profilesIndex.all">
+      <a ui-sref="profilesShow({ id: profile.id })">
+        <h2>{{ profile.rank }}</h2>
+      </a>
+        <h4>{{ profile.contact }}</h4>
+    </li>
+  </ul>
+</section>

@@ -11,11 +11,12 @@ function ProfilesIndexController(Profile) {
   profilesIndex.all = Profile.query();
 }
 
-ProfilesNewController.$inject = ['Profile', '$state'];
-function ProfilesNewController(Profile, $state) {
+ProfilesNewController.$inject = ['Profile', '$state', '$auth'];
+function ProfilesNewController(Profile, $state, $auth) {
   const profilesNew = this;
 
   profilesNew.user = {};
+  profilesNew.user.user_id = $auth.getPayload().id;
 
   function create() {
     Profile.save(profilesNew.user, () => {
@@ -26,15 +27,18 @@ function ProfilesNewController(Profile, $state) {
   profilesNew.create = create;
 }
 
-ProfilesShowController.$inject = ['Profile', '$state', '$auth'];
-function ProfilesShowController(Profile, $state , $auth) {
+ProfilesShowController.$inject = ['Profile', 'Review', '$state', '$auth'];
+function ProfilesShowController(Profile, Review, $state , $auth) {
   const profilesShow = this;
 
-  profilesShow.user = Profile.get($state.params);
+  profilesShow.profile = Profile.get($state.params);
+  profilesShow.profile.$promise.then((profile) => {
+    profilesShow.reviews = Review.query({ profile_id: profile.id });
+  });
 
   function deleteProfile() {
     // console.log('I\'m trying to delete a user...');
-    profilesShow.user.$remove(() => {
+    profilesShow.profile.$remove(() => {
       $state.go('profilesIndex');
     });
   }

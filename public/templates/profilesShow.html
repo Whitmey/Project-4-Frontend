@@ -1,10 +1,44 @@
 <h1>Profiles Show</h1>
-<!-- {{show.user}} -->
-<h1>Ranking: {{ show.user.rank }}</h1>
-<h1>Fee: £{{ show.user.fee }}</h1>
-<h1>Email: {{ show.user.contact }}</h1>
+<h1>Ranking: {{ show.profile.rank }}</h1>
+<h1>Fee: £{{ show.profile.fee }}</h1>
+<h1>Email: {{ show.profile.contact }}</h1>
 <div ng-controller="MainController as main">
-<button ng-if="main.isLoggedIn()" ui-sref="profilesEdit({ id: show.user.id })" class="button">Edit</button>
-<button ng-if="main.isLoggedIn()" ng-click="show.delete()">Delete</button>
+  <button ng-if="main.isLoggedIn()" ui-sref="profilesEdit({ id: show.profile.id })" class="button">Edit</button>
+  <button ng-if="main.isLoggedIn()" ng-click="show.delete()">Delete</button>
 </div>
-g
+
+<section>
+  <h1>Reviews Index</h1>
+  <ul>
+    <li ng-repeat="review in show.reviews">
+      <a ui-sref="reviewsShow({ id: review.id })">
+        <h2>{{ review.rating }}</h2>
+      </a>
+        <h4>{{ review.body }}</h4>
+    </li>
+  </ul>
+</section>
+
+<section ng-controller="ReviewsNewController as reviewsNew">
+  <h1>Write a review</h1>
+  <form novalidate ng-submit="reviewsNew.create()">
+    <div>
+      <label>user_id</label>
+      <input type="number" placeholder="user" ng-model="reviewsNew.user.user_id">
+    </div>
+    <div>
+      <label>profile_id</label>
+      <input type="number" placeholder="user" ng-model="reviewsNew.user.profile_id">
+    </div>
+    <div>
+      <label>Rating</label>
+      <input type="number" placeholder="Rank" ng-model="reviewsNew.user.rating">
+    </div>
+    <div>
+      <label>Body</label>
+      <input type="text" placeholder="Fee" ng-model="reviewsNew.user.body">
+    </div>
+
+    <button>Create</button>
+  </form>
+</section>

@@ -37,7 +37,7 @@ function Router($stateProvider, $urlRouterProvider) {
   .state('profilesShow', {
     url: '/profiles/:id',
     templateUrl: '/templates/profilesShow.html',
-    controller: 'ProfilesShowController as profile'
+    controller: 'ProfilesShowController as show'
   })
   .state('profilesEdit', {
     url: '/profiles/:id/edit',
@@ -78,11 +78,15 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: '/templates/home.html'
   })
+  .state('landing', {
+    url: '/landing',
+    templateUrl: '/templates/landing.html'
+  })
   .state('createProfile', {
     url: '/createProfile',
     templateUrl: '/templates/createProfile.html',
     controller: 'ProfilesNewController as profilesNew'
   });
 
-  $urlRouterProvider.otherwise('/users');
+  $urlRouterProvider.otherwise('/home');
 }

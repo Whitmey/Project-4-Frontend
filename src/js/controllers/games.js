@@ -26,11 +26,15 @@ function GamesNewController(Game, $state) {
   gamesNew.create = create;
 }
 
-GamesShowController.$inject = ['Game', '$state', '$auth'];
-function GamesShowController(Game, $state , $auth) {
+GamesShowController.$inject = ['Game', 'Profile', '$state', '$auth'];
+function GamesShowController(Game, Profile, $state , $auth) {
   const gamesShow = this;
 
-  gamesShow.user = Game.get($state.params);
+  gamesShow.game = Game.get($state.params);
+  gamesShow.game.$promise.then((game) => {
+    gamesShow.profiles = Profile.query({ game_id: game.id });
+  });
+
 
   function deleteGame() {
     // console.log('I\'m trying to delete a user...');

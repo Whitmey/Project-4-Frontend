@@ -13,7 +13,18 @@
   </div>
   <div>
     <label>Game:</label>
-    <input type="number" placeholder="game_id" ng-model="profilesNew.user.game_id">
+    <!-- <input type="number" placeholder="game_id" ng-model="profilesNew.user.game_id"> -->
+    <select ng-model="profilesNew.user.game_id">
+      <option ng-value="1">Battlefield 1</option>
+      <option ng-value="4">FIFA 17</option>
+      <option ng-value="5">GTA 5</option>
+      <option ng-value="6">No Man's Sky</option>
+      <option ng-value="7">League Of Legends</option>
+      <option ng-value="8">Overwatch</option>
+      <option ng-value="9">The Division</option>
+      <option ng-value="10">Final Fantasy XV</option>
+      <option ng-value="11">Destiny</option>
+    </select>
   </div>
 
   <!-- <p>Current user: {{ profilesNew.user.user_id }}</p> -->

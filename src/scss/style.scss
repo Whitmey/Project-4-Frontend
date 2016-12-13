@@ -1,3 +1,31 @@
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menuButton {
+    float: left;
+}
+
+.menuButton .link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.link:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+background-color:#4CAF50;
+}
+
 .games {
   display: inline-block;
   margin: 30px;
@@ -6,3 +34,50 @@
 #gameTitle {
   text-align: center;
 }
+
+body {
+  color: #6441A4;
+  background-color: #EFEEF1;
+}
+
+#login, #register {
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  background-color: white;
+  display: block;
+  height: 375px;
+  width: 380px;
+  text-align: center;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  position: relative;
+  left: 25%;
+  text-align: center;
+  width: 200px;
+}
+
+img {
+  border: 10px solid #333333;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #6441A4;
+}
+
+// #register {
+//   position: fixed;
+//   top: 20%;
+//   left: 35%;
+//   background-color: white;
+//   display: block;
+//   height: 375px;
+//   width:380px;
+//   text-align: center;
+// }

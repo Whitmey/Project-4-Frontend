@@ -71,6 +71,7 @@ img {
   width: 300px;
   display: inline-block;
   margin: 5px;
+  text-align: center;
 }
 
 .button {
@@ -80,4 +81,19 @@ img {
 
 #profilesIndex {
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+#logoutButton {
+  float: right;
+  background-color: #DA4453;
+}
+
+.boxMargin {
+  margin-top:40px;
 }

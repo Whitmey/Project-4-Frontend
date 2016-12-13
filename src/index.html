@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <nav>
+      <nav ng-controller="MainController as main">
         <ul id="navBar">
           <li class="menuButton">
             <a class="link" class="active" ui-sref="home" style="background-color:#6441A4">Home</a>
@@ -24,15 +24,18 @@
           <li class="menuButton">
             <a class="link" ui-sref="createProfile">Create Profile</a>
           </li>
-          <li class="menuButton">
+          <!-- <li class="menuButton">
             <a class="link" ui-sref="profilesIndex">Profiles</a>
-          </li>
+          </li> -->
           <li class="menuButton">
             <a class="link" ui-sref="gamesIndex">Games</a>
           </li>
-          <li class="menuButton">
-            <a class="link" ui-sref="reviewsIndex">Reviews</a>
+          <li class="menuButton" id="logoutButton">
+            <a class="link" ng-click="main.logout()">Logout</a>
           </li>
+          <!-- <li class="menuButton">
+            <a class="link" ui-sref="reviewsIndex">Reviews</a>
+          </li> -->
         </ul>
       </nav>
       <main ui-view></main>

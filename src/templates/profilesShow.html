@@ -22,13 +22,14 @@
 <section ng-controller="ReviewsNewController as reviewsNew">
   <h1>Write a review</h1>
   <form novalidate ng-submit="reviewsNew.create()">
-    <div>
+    <p>Current user = {{ reviewsNew.user.user_id }}</p>
+    <p>Current profile: {{ show.profile.id }}</p>
+    <!-- <div>
       <label>user_id</label>
       <input type="number" placeholder="user" ng-model="reviewsNew.user.user_id">
-    </div>
+    </div> -->
     <div>
-      <label>profile_id</label>
-      <input type="number" placeholder="user" ng-model="reviewsNew.user.profile_id">
+      <input type="hidden" placeholder="user" ng-value="reviewsNew.user.profile_id = show.profile.id">
     </div>
     <div>
       <label>Rating</label>

@@ -11,11 +11,15 @@ function ReviewsIndexController(Review) {
   reviewsIndex.all = Review.query();
 }
 
-ReviewsNewController.$inject = ['Review', '$state'];
-function ReviewsNewController(Review, $state) {
+ReviewsNewController.$inject = ['Review', '$state', '$auth'];
+function ReviewsNewController(Review, $state, $auth) {
   const reviewsNew = this;
 
   reviewsNew.user = {};
+  reviewsNew.user.user_id = $auth.getPayload().id; // Gets current user
+  // reviewsNew.user.profile_id = reviewsNew.show.profile.id;
+  // console.log(reviewsNew.user);
+  // Need to get current profile_id set here
 
   function create() {
     Review.save(reviewsNew.user, () => {

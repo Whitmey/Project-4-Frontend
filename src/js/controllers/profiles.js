@@ -16,7 +16,7 @@ function ProfilesNewController(Profile, $state, $auth) {
   const profilesNew = this;
 
   profilesNew.user = {};
-  profilesNew.user.user_id = $auth.getPayload().id;
+  profilesNew.user.user_id = $auth.getPayload().id; //Gets the current user
 
   function create() {
     Profile.save(profilesNew.user, () => {
@@ -31,7 +31,7 @@ ProfilesShowController.$inject = ['Profile', 'Review', '$state', '$auth'];
 function ProfilesShowController(Profile, Review, $state , $auth) {
   const profilesShow = this;
 
-  profilesShow.profile = Profile.get($state.params);
+  profilesShow.profile = Profile.get($state.params); //Gets the current profile
   profilesShow.profile.$promise.then((profile) => {
     profilesShow.reviews = Review.query({ profile_id: profile.id });
   });

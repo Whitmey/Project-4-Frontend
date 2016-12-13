@@ -1,12 +1,14 @@
 <h1>Games Show</h1>
+{{ game.image }}
 <section>
   <ul>
-    <li ng-repeat="profile in game.profiles">
-      <a ui-sref="profilesShow({ id: profile.id })">
-        <h2>{{ profile.rank }}</h2>
-      </a>
-        <p3>{{ profile.contact }}</p3>
-    </li>
+      <li class="profileBox" ng-repeat="profile in game.profiles">
+        <a ui-sref="profilesShow({ id: profile.id })">
+          <h3>{{ profile.rank }}</h3>
+        </a>
+          <p3>Price: £{{ profile.fee }}</p3><br>
+          <p3>{{ profile.contact }}</p3>
+      </li>
     <div ng-controller="MainController as main">
       <!-- <button ng-if="main.isLoggedIn()" ui-sref="gamesEdit({ id: game.game.id })" class="button">Edit</button> -->
       <button ng-if="main.isLoggedIn()" ng-click="show.delete()">Delete</button>

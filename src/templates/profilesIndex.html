@@ -1,7 +1,7 @@
 <section>
   <h1>All Profiles</h1>
   <ul>
-    <li ng-repeat="profile in profilesIndex.all">
+    <li id="profilesIndex" class="profileBox" ng-repeat="profile in profilesIndex.all">
       <a ui-sref="profilesShow({ id: profile.id })">
         <h2>{{ profile.rank }}</h2>
       </a>

@@ -1,6 +1,6 @@
 #navBar {
     list-style-type: none;
-    margin: 0;
+    margin: 15px 0 0 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -40,7 +40,7 @@ body {
   background-color: #EFEEF1;
 }
 
-#login, #register {
+#login, #register, #createProfile {
   position: fixed;
   top: 20%;
   left: 35%;
@@ -66,18 +66,18 @@ img {
   border: 10px solid #333333;
 }
 
+.profileBox {
+  border: 5px solid #333333;
+  width: 300px;
+  display: inline-block;
+  margin: 5px;
+}
+
 .button {
   margin-top: 10px;
   background-color: #6441A4;
 }
 
-// #register {
-//   position: fixed;
-//   top: 20%;
-//   left: 35%;
-//   background-color: white;
-//   display: block;
-//   height: 375px;
-//   width:380px;
-//   text-align: center;
-// }
+#profilesIndex {
+  text-align: center;
+}

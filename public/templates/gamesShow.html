@@ -6,7 +6,11 @@
       <a ui-sref="profilesShow({ id: profile.id })">
         <h2>{{ profile.rank }}</h2>
       </a>
-        <h4>{{ profile.contact }}</h4>
+        <p3>{{ profile.contact }}</p3>
     </li>
+    <div ng-controller="MainController as main">
+      <!-- <button ng-if="main.isLoggedIn()" ui-sref="gamesEdit({ id: game.game.id })" class="button">Edit</button> -->
+      <button ng-if="main.isLoggedIn()" ng-click="show.delete()">Delete</button>
+    </div>
   </ul>
 </section>

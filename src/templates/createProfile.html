@@ -1,21 +1,21 @@
 <form novalidate ng-submit="profilesNew.create()">
   <div>
-    <label>Rank</label>
-    <input type="text" placeholder="Rank" ng-model="profilesNew.user.rank">
+    <label>UserName:</label>
+    <input type="text" placeholder="UserName" ng-model="profilesNew.user.rank">
   </div>
   <div>
-    <label>Fee</label>
+    <label>Fee Per Hour:</label>
     <input type="number" placeholder="Fee" ng-model="profilesNew.user.fee">
   </div>
   <div>
-    <label>Contact</label>
+    <label>Contact:</label>
     <input type="email" placeholder="Contact" ng-model="profilesNew.user.contact">
   </div>
   <div>
-    <label>Game</label>
+    <label>Game:</label>
     <input type="number" placeholder="game_id" ng-model="profilesNew.user.game_id">
   </div>
 
-  <p>Current user: {{ profilesNew.user.user_id }}</p>
-  <button>Create</button>
+  <!-- <p>Current user: {{ profilesNew.user.user_id }}</p> -->
+  <button>Create Profile</button>
 </form>

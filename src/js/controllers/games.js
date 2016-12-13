@@ -37,7 +37,7 @@ function GamesShowController(Game, Profile, $state , $auth) {
 
 
   function deleteGame() {
-    // console.log('I\'m trying to delete a user...');
+    console.log('I\'m trying to delete a game...');
     gamesShow.user.$remove(() => {
       $state.go('gamesIndex');
     });

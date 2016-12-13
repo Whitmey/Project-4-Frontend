@@ -1,11 +1,11 @@
 <section>
   <h1>Games Index</h1>
   <ul>
-    <li ng-repeat="game in gamesIndex.all">
+    <li class="games" ng-repeat="game in gamesIndex.all">
       <a ui-sref="gamesShow({ id: game.id })">
-        <h2>{{ game.name }}</h2>
-      </a>
         <img src="{{ game.image }}"></img>
+      </a>
+        <h4 id="gameTitle">{{ game.name }}</h4>
     </li>
   </ul>
 </section>

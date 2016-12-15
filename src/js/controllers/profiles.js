@@ -19,6 +19,7 @@ function ProfilesNewController(Profile, $state, $auth) {
   profilesNew.user.user_id = $auth.getPayload().id; //Gets the current user
 
   function create() {
+    console.log('passing in: ', profilesNew.user);
     Profile.save(profilesNew.user, () => {
       $state.go('gamesIndex');
     });

@@ -20,7 +20,7 @@ function ProfilesNewController(Profile, $state, $auth) {
 
   function create() {
     Profile.save(profilesNew.user, () => {
-      $state.go('profilesIndex');
+      $state.go('gamesIndex');
     });
   }
 
@@ -31,6 +31,7 @@ ProfilesShowController.$inject = ['Profile', 'Review', '$state', '$auth'];
 function ProfilesShowController(Profile, Review, $state , $auth) {
   const profilesShow = this;
 
+  profilesShow.loggedInUserId = $auth.getPayload().id; //Gets the current user
   profilesShow.profile = Profile.get($state.params); //Gets the current profile
   profilesShow.profile.$promise.then((profile) => {
     profilesShow.reviews = Review.query({ profile_id: profile.id });
@@ -39,7 +40,7 @@ function ProfilesShowController(Profile, Review, $state , $auth) {
   function deleteProfile() {
     // console.log('I\'m trying to delete a user...');
     profilesShow.profile.$remove(() => {
-      $state.go('profilesIndex');
+      $state.go('gamesIndex');
     });
   }
 

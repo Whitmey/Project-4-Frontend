@@ -1,19 +1,19 @@
 <h1 class="title">Create A Profile</h1>
 <form id="createProfile" novalidate ng-submit="profilesNew.create()">
   <div class="boxMargin">
-    <label>UserName:</label>
+    <label>UserName</label>
     <input type="text" placeholder="UserName" ng-model="profilesNew.user.rank">
   </div>
   <div>
-    <label>Fee Per Hour:</label>
+    <label>Fee Per Hour</label>
     <input type="number" placeholder="Fee" ng-model="profilesNew.user.fee">
   </div>
   <div>
-    <label>Contact:</label>
+    <label>Contact</label>
     <input type="email" placeholder="Contact" ng-model="profilesNew.user.contact">
   </div>
   <div>
-    <label>Game:</label>
+    <label>Game</label>
     <!-- <input type="number" placeholder="game_id" ng-model="profilesNew.user.game_id"> -->
     <select ng-model="profilesNew.user.game_id">
       <option ng-value="1">Battlefield 1</option>
@@ -29,5 +29,5 @@
   </div>
 
   <!-- <p>Current user: {{ profilesNew.user.user_id }}</p> -->
-  <button>Create Profile</button>
+  <button class="button">Create Profile</button>
 </form>

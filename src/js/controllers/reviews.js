@@ -23,7 +23,7 @@ function ReviewsNewController(Review, $state, $auth) {
 
   function create() {
     Review.save(reviewsNew.user, () => {
-      $state.go('reviewsIndex');
+      $state.go('gamesIndex');
     });
   }
 
@@ -39,7 +39,7 @@ function ReviewsShowController(Review, $state , $auth) {
   function deleteReview() {
     // console.log('I\'m trying to delete a user...');
     reviewsShow.user.$remove(() => {
-      $state.go('reviewsIndex');
+      $state.go('gamesIndex');
     });
   }
 

@@ -47,7 +47,7 @@ body {
   left: 35%;
   background-color: white;
   display: block;
-  height: 375px;
+  height: 475px;
   width: 380px;
   text-align: center;
   border: 5px solid #737373;
@@ -71,24 +71,13 @@ img {
   border: 10px solid #333333;
 }
 
-.profileBox {
-  border: 5px solid #333333;
-  width: 300px;
-  display: inline-block;
-  margin: 5px;
-  text-align: center;
-}
-
 .button {
   margin-top: 10px;
   background-color: #6441A4;
 }
 
-#profilesIndex {
-  text-align: center;
-}
-
 .title {
+  text-decoration: underline;
   text-align: center;
   margin-right: 50px;
   margin-top: 20px;
@@ -104,12 +93,49 @@ img {
   margin-top:40px;
 }
 
-#profileShow {
-  border: 1px solid black;
+#profileImage {
+  height: 300px;
+  width: 300px;
   margin-top: 20px;
-  text-align: center;
+  display: inline-block;
+  float: left
+}
+
+#infoBox {
+  padding-top: 50px;
+  padding-left: 350px;
+  padding-bottom: 120px;
 }
 
 #reviewBox {
-  left: 41%;
+  display: inline-block;
+  border: 3px solid #737373;
+  height: 150px;
+  width: 200px;
+  margin: 10px;
+}
+
+.profileBox {
+  display: inline-block;
+  border: 3px solid #737373;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#reviewTitle {
+  margin-bottom: 30px;
+}
+
+#reviewForm {
+  position: absolute;
+  left: 35%;
+  background-color: white;
+  display: block;
+  height: 175px;
+  width: 380px;
+  text-align: center;
+  border: 5px solid #737373;
 }

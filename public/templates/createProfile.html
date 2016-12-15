@@ -13,6 +13,14 @@
     <input type="email" placeholder="Contact" ng-model="profilesNew.user.contact">
   </div>
   <div>
+    <label>Image URL</label>
+    <input type="text" placeholder="Image URL" ng-model="profilesNew.user.image">
+  </div>
+  <div>
+    <label>About</label>
+    <input type="text" placeholder="About" ng-model="profilesNew.user.text">
+  </div>
+  <div>
     <label>Game</label>
     <!-- <input type="number" placeholder="game_id" ng-model="profilesNew.user.game_id"> -->
     <select ng-model="profilesNew.user.game_id">
@@ -23,8 +31,11 @@
       <option ng-value="7">League Of Legends</option>
       <option ng-value="8">Overwatch</option>
       <option ng-value="9">The Division</option>
-      <option ng-value="10">Final Fantasy XV</option>
+      <option ng-value="15">Final Fantasy</option>
       <option ng-value="11">Destiny</option>
+      <option ng-value="12">Call Of Duty</option>
+      <option ng-value="13">H1Z1</option>
+      <option ng-value="14">Rocket League</option>
     </select>
   </div>
 

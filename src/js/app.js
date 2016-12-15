@@ -1,5 +1,5 @@
 angular.module('finalProject', ['ngResource', 'ui.router', 'satellizer'])
-  .constant('API_URL', window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://boostme-api.herokuapp.com/api')
+  .constant('API_URL', 'https://boostme-api.herokuapp.com/api')
   .config(Auth);
 
 Auth.$inject = ['$authProvider', 'API_URL'];
@@ -9,3 +9,5 @@ function Auth($authProvider, API_URL) {
 
   $authProvider.tokenPrefix = '';
 }
+
+// .constant('API_URL', window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://boostme-api.herokuapp.com')
